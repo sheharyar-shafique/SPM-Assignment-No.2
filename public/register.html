@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Register · CSRBS</title><link rel="stylesheet" href="/styles.css"></head>
+<body><header><a class="brand" href="/">CSRBS</a><nav><a href="/">Home</a><a href="/login.html">Log in</a></nav></header>
+<main><article><h1>Create your account</h1><p>CSRBS-7 — Student registration</p>
+<form id="registration-form">
+<label for="name">Full name</label><input id="name" name="name" type="text" minlength="2" maxlength="100" autocomplete="name" required>
+<label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required>
+<label for="password">Password</label><input id="password" name="password" type="password" minlength="8" maxlength="128" autocomplete="new-password" required>
+<button type="submit">Create account</button><p id="message" class="feedback" role="status" aria-live="polite"></p>
+</form><p>Already registered? <a href="/login.html">Log in</a>.</p></article></main>
+<script src="/js/register.js" defer></script></body></html>
