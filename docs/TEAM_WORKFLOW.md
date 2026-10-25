@@ -23,19 +23,27 @@ cd SPM-Assignment-No.2
 npm install
 git switch main
 git pull origin main
-git switch -c CSRBS-9-search-rooms
+git fetch origin
+git switch --track origin/CSRBS-9-search-rooms
 ```
 
 **CSRBS-9**: Implement `GET /api/rooms` filters for optional date, time and minimum capacity. Exclude rooms unavailable in the selected time slot by checking the `reservations` table. Add tests for filters and overlapping reservations. Build the room search page. Commit with names such as `CSRBS-9 Add room availability filtering`, push branch, and open a PR whose title includes the Jira key.
 
-**CSRBS-11**: From updated main, create `CSRBS-11-room-details`. Implement `GET /api/rooms/:id` to return room location, capacity and facilities, a sensible 404 for missing rooms, a details page, and tests. Commit and open a separate Jira-keyed PR.
+**CSRBS-11**: A remote branch already exists. Start with `git fetch origin` then `git switch --track origin/CSRBS-11-room-details` in a fresh clone (or `git switch CSRBS-11-room-details` if checked out before). Implement `GET /api/rooms/:id` to return room location, capacity and facilities, a sensible 404 for missing rooms, a details page, and tests. Commit and open a separate Jira-keyed PR.
 
 ## Cross-review
 
-1. Shaheryar reviews PR #1 and PR #2 in GitHub using the **Files changed** and **Review changes** controls; comments should reflect his own inspection.
+1. Shaheryar has been requested as reviewer on [PR #1](https://github.com/sheharyar-shafique/SPM-Assignment-No.2/pull/1) and [PR #2](https://github.com/sheharyar-shafique/SPM-Assignment-No.2/pull/2). Sign in as `shaheryarmalik-dev`, inspect **Files changed**, run tests, then submit his own **Review changes** assessment; comments should reflect his own inspection.
 2. Member 1 reviews Shaheryar's PRs after he implements his own branches.
 3. Address requested changes on each feature branch and obtain approval before merge.
 4. Verify tests pass, merge approved PRs, then change Jira story statuses to Done.
+
+## Current status
+
+- Collaborator `shaheryarmalik-dev`: verified **Write** permission.
+- CSRBS-9 and CSRBS-11: remote feature branches created, waiting for Shaheryar's actual code commits.
+- PR #1 and PR #2: automated tests passed; review requested, not merged.
+- CSRBS-7 and CSRBS-8: In Progress; CSRBS-9 and CSRBS-11: To Do until work begins.
 
 ## Jira GitHub integration
 
